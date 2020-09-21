@@ -1,0 +1,199 @@
+%!TEX root = Calculus_I.tex
+\chapter{Key Concept: The Definite Integral}
+
+\section{How Do We Measure Distance Traveled?}
+The \textbf{\textit{distance}} formula is commonly referred to as:
+%
+\begin{equation}
+\text{Distance} = \text{Velocity} \cdot \text{Time}
+\end{equation}
+%
+Recall that \textbf{\textit{velocity}} has both magnitude \textit{and} direction. Thus, it is important to know what direction indicates positive \textbf{\textit{velocity}}. This section will estimate \textbf{\textit{distance}} when \textbf{\textit{velocity}} is time-varying.
+
+\vspace{0.1in}
+When estimating the \textbf{\textit{distance}} traveled, it is important to know how often the \textbf{\textit{velocity}} measurements are taken. For example, consider this table with measurements taken every 2 seconds:
+%
+\begin{table}
+\begin{center}
+\begin{tabular}{ccccccc}
+\hline
+Time (sec) & 0 & 2 & 4 & 6 & 8 & 10\\
+\hline
+Velocity $\left(\frac{\text{ft}}{\text{s}}\right)$ & 20 & 30 & 38 & 44 & 38 & 50\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%
+Higher frequency \textbf{\textit{velocity}} measurements result in less \textbf{\textit{distance}} estimation error, but an estimate can still be made. This results in:
+%
+\begin{equation}
+20\cdot2 + 30\cdot2 + 38\cdot2 + 44\cdot2 + 48\cdot2 = 360 \text{feet}
+\end{equation}
+%
+This serves as a lower limit because we know the car has moved at these speeds when it was measured. An upper limit considers the fact that the car instantaneously accelerated to the maximum velocity from the next measurement, yielding:
+%
+\begin{equation}
+30\cdot2 + 38\cdot2 + 44\cdot2 + 48\cdot2 + 50\cdot2 = 420 \text{feet}
+\end{equation}
+%
+Thus, we can conclude that:
+%
+\begin{equation}
+360 \leq \text{Total Distance Traveled} \leq 420 \text{feet}
+\end{equation}
+%
+A smaller difference between the upper and lower estimates can be obtained by increasing the measurement frequency. Each time interval between measurements can be represented by a rectangle on the \textit{Time-Velocity}-axes. As the time intervals get smaller, the rectangles become thinner. The \textbf{\textit{limit}} of this is as the time interval approaches zero, the rectangles are infinitesimally thin, and the distance error between the lower and upper estimates approaches zero. It will be shown later that, in the \textbf{\textit{distance}} and \textbf{\textit{velocity}} relationship, the \textbf{\textbf{area under the curve}} of the \textit{Time-Velocity}-axes is equivalent to the \textbf{\textit{total distance}} traveled, if \textbf{\textit{velocity}} is strictly positive.
+
+\vspace{0.1in}
+If \textbf{\textit{velocity}} is ever negative, then the object is traveling back towards the starting position. Thus, its \textbf{\textit{distance}} from the starting position is decreasing, but the \textbf{\textit{total distance}} traveled is increasing.
+
+\vspace{0.1in}
+In the general case, let $v = f(t)$ be a non-negative \textbf{\textit{velocity}} function, $t \geq 0$. One may wish to determine the \textbf{\textit{distance}} traveled between times $a$ and $b$. Measurements are taken at evenly spaced times, $t_0$, $t_1$, ... $t_n$. If $a = t_0$ and $b = t_n$, then the time interval between any two measurements is given by:
+%
+\begin{equation}
+\Delta t = \frac{b - a}{n}
+\end{equation}
+%
+For each time interval, $t_i$, the \textbf{\textit{distance}} traveled is given by:
+%
+\begin{equation}
+\text{Distance} = f\left(t_i\right)\Delta t
+\end{equation}
+%
+Summing all of the distances between each subsequent time interval between $a$ and $b$ yields:
+%
+\begin{equation}
+\label{eq:LHSum}
+\text{Distance} \approx \sum_{i=0}^{n-1} f\left(t_i\right)\Delta t
+\end{equation}
+%
+This is a \textbf{\textit{Left-Hand Sum}} because it includes all velocities from the left-side of the rectangular intervals. The \textbf{\textit{Right-Hand Sum}} can be written as:
+%
+\begin{equation}
+\label{eq:RHSum}
+\textbf{Distance} \approx \sum_{i=1}^n f\left(t_i\right)\Delta t
+\end{equation}
+%
+If $f$ is an \textbf{\textit{increasing function}}, then the \textbf{\textit{Left-Hand Sum}} underestimates the \textbf{\textit{total distance}} and \textbf{\textit{Right-Hand Sum}} overestimates it. Conversely, if $f$ is \textbf{\textit{decreasing}}, then the \textbf{\textit{Left-Hand Sum}} overestimates the \textbf{\textit{total distance}} and \textbf{\textit{Right-Hand Sum}} underestimates it. For a \textbf{\textit{monotonically increasing}} or \textbf{\textit{monotonically decreasing}} function, the accuracy of the estimates is given by:
+%
+\begin{equation}
+\text{Error} = |f(b) - f(a)| \cdot \Delta t
+\end{equation}
+%
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Definite Integral}
+The \textbf{\textit{Definite Integral}} is defined by taking the \textbf{\textit{limit}} of the \textbf{\textit{Left-Hand Sum}} or \textbf{\textit{Right-Hand Sum}} as the parameter $n$ approaches $+\infty$, provided the function $f(x)$ is \textbf{\textit{continuous}} on $[a, b]$. This can be written as:
+%
+\begin{equation}
+\int_a^b f(x)dx
+\end{equation}
+%
+The summations represented by Equations (\ref{eq:LHSum}) and (\ref{eq:RHSum}) are referred to as \textbf{\textit{Riemann Sums}}. The \textbf{\textit{integrand}} is the function being integrated, $f(x)$, and the \textbf{\textit{limits of integration}} are the endpoints of the interval, $a$ and $b$.
+
+\vspace{0.1in}
+More specifically, Equations (\ref{eq:LHSum}) and (\ref{eq:RHSum}) are special cases of \textbf{\textit{Riemann Sums}}. The general form of the \textbf{\textit{Riemann Sum}} for a function, $f(x), x \in [a, b]$, is given by:
+%
+\begin{equation}
+\sum_{i=1}^n f\left(c_i\right) \Delta t_i
+\end{equation}
+%
+where $a = t_0 < t_1 <$ ... $t_n = b$ and, for $i = 1, 2$ ..., $n$, $\Delta t_i = t_i - t_{i-1}$, and $t_{i-1} \leq c_i \leq t_i$.
+\vspace{0.1in}
+The \textbf{\textit{Definite Integral}} approximates the area under the curve down to the $x$-axis by summing the areas of $n$ rectangles in the \textbf{\textit{Riemann Sum}}. When the \textbf{\textit{integrand}} is negative, the distance to the $x$-axis is above the curve. Because as positive sign convention is used, the resulting area above the curve found through  \textbf{\textit{integration}} is negative. This is what causes \textbf{\textit{integrations}} such as $\int_0^{2\pi} \sin x$ $dx$ to equal zero.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Fundamental Theorem and Interpretations}
+The \textbf{\textit{Fundamental Theorem of Calculus}} is written as:
+
+\vspace{0.2in}
+If $f$ is \textbf{\textit{continuous}} on $[a, b]$, and $f(x) = F\prime(x)$, then:
+%
+\begin{equation}
+\int_a^b f(x)dx = F(b) - F(a)
+\end{equation}
+%
+Thus, if a function $f$ is equal to the \textbf{\textit{rate of change}} of a quantity, then the \textbf{\textit{definite integral}} results in the total change.
+
+\vspace{0.1in}
+The \textbf{\textit{integral}} can also be used to approximate the average value of a function, $f$, over a given interval, $[a, b]$:
+%
+\begin{equation}
+\text{Average Value of } f = \frac{1}{b-a}\int_a^bf(x)dx
+\end{equation}
+%
+\vspace{0.1in}
+Lastly, the \textbf{\textit{Fundamental Theorem of Calculus}} can be used to compute \textbf{\textit{definite integrals}} exactly.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Theorems About Definite Integrals}
+So far, we have only considered the \textbf{\textit{Definite Integral}} when $a < b$. Recall that:
+%
+\begin{equation}
+\int_a^b f(x)dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f\left(x_i\right) \Delta x
+\end{equation}
+%
+Then, provided $f(x)$ is \textbf{\textit{continuous}}, for any numbers, $a$, $b$, and $c$:
+%
+\begin{enumerate}
+\item $\int_b^a f(x)$ $dx = - \int_a^b f(x)$ $dx$\\
+\item $\int_a^c f(x)$ $dx + \int_c^b f(x)$ $dx = \int_a^b f(x)$ $dx$
+\end{enumerate}
+%
+The first result can be derived from the definition of $\Delta x$, namely:
+%
+\begin{equation}
+\Delta x = \frac{(a - b)}{n} = -\frac{(b - a)}{n}
+\end{equation}
+%
+The second result is true because of the definition of $\Delta x$ and that the upper limit of integration of the first is equal to the lower limit of integration for the second, $c$.
+
+\vspace{0.1in}
+We can also evaluate properties of \textbf{\textit{integrals}} for multiple functions. Suppose $f$ and $g$ are both continuous functions, and $c$ is an arbitrary constant. Then:
+%
+\begin{enumerate}
+\item $\int_a^b \left(f(x) \pm g(x)\right)$ $dx = \int_a^b f(x)$ $dx \pm \int_a^b g(x)$ $dx$\\
+\item $\int_a^b c \cdot f(x)$ $dx = c\int_a^b f(x)$ $dx$
+\end{enumerate}
+%
+These properties hold because of the \textbf{\textit{Principle of Superposition}} and that $c$ is simply a scaling factor.
+
+\vspace{0.1in}
+The area between curves can also be calculated, provided $f(x)$ lies above $g(x)$ for $a \leq x \leq b$:
+%
+\begin{equation}
+\text{Area between $f$ and $g$} = \int_a^b\left(f(x) - g(x)\right)dx
+\end{equation}
+%
+\vspace{0.1in}
+Symmetry can also be used to aid in the evaluation of \textbf{\textit{integrals}}. For \textbf{\textit{Even Functions}}:
+%
+\begin{equation}
+\int_{-a}^a f(x)dx = 2\int_0^a f(x)dx
+\end{equation}
+%
+and for \textbf{\textit{Odd Functions}}:
+%
+\begin{equation}
+\int_{-a}^a f(x)dx = 0
+\end{equation}
+%
+This is because of the definition of \textbf{\textit{Even}} and \textbf{\textit{Odd Functions}}.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
