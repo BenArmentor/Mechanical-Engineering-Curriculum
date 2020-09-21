@@ -1,0 +1,380 @@
+%!TEX root = Calculus_I.tex
+\chapter{A Library of Functions}
+\section{Functions and Change}
+
+\textbf{\textit{function}} -- An item used to represent the dependence of one quantity upon another. $f(x)$ means $f$ is a function of $x$.
+
+\textbf{\textit{domain}} -- The input values of a function ($x$ part of $f(x)$). Also referred to as the \textbf{\textit{independent variable}}.
+
+\textbf{\textit{range}} -- The output values of a function ($y$ part of $y = f(x)$). Also referred to as the \textit{dependent variable} because it depends on $x$.
+\vspace{0.1in}
+Some variables assume discrete values, while others are continuous. Some examples of discrete variables are listed below.
+\begin{enumerate}
+\item Date\\
+\vspace{-0.25in}
+\item Cost\\
+\vspace{-0.25in}
+\item Number of ...
+\end{enumerate}
+
+Note that some quantities, such as ``Date" in the above list, are discretized values from a continuous variable, time. Measurement of a continuous variable results in a set of discrete values.
+
+\vspace{0.1in}
+Domain and Range values are often written using \textbf{\textit{Interval Notation}}. This notation is used to describe the extrema of a set of numbers. The following cases are used to describe numeric sets using this notation:
+
+\begin{equation}
+a \leq x \leq b = [a, b]
+\end{equation}
+
+\begin{equation}
+a \leq x < b = [a, b)
+\end{equation}
+
+\begin{equation}
+a < x \leq b = (a, b]
+\end{equation}
+
+\begin{equation}
+a < x < b = (a, b)
+\end{equation}
+ 
+\vspace{0.1in}
+If the domain is not specified, it is usually assumed to be the the set of real numbers, that is $x \in \mathbb{R}$.
+
+\vspace{0.25in}
+\textbf{\textit{Linear Function}} -- A function is linear if the \textbf{\textit{slope}}, or rate of change of the function, is constant.
+\textbf{\textit{slope}} -- The rate that the dependent variable changes with respect to the independent variable.
+
+\vspace{0.1in}
+With this, certain assumptions about the function hold:
+\begin{enumerate}
+\item The Principle of Superposition applies\\
+\vspace{-0.25in}
+\item Highest degree of function is 1\\
+\end{enumerate}
+
+\vspace{0.1in}
+The Greek letter $\bm{\Delta}$ is used to indicate ``change in" a particular variable; thus, $\bm{\Delta} x$ means ``Change in $x$." This is commonly used to express the \textbf{\textit{slope}} of a function, $m$:
+\begin{equation}
+m = \frac{Rise}{Run} = \frac{\Delta y}{\Delta x} = \frac{f\left(x_2\right) - f\left(x_1\right)}{x_2 - x_1}
+\end{equation}
+
+\vspace{0.1in}
+If the magnitude of $f(x)$ increases as $x$ increases, then $f(x)$ is classified as an \textbf{\textit{Increasing Function}}. Contrarily, if the magnitude of $f(x)$ decreases as $x$ increases, then $f(x)$ is classified as a \textbf{\textit{Decreasing Function}}. If this is true $\forall x$ (for all values of $x$), then the function can also be classified as \textbf{\textit{monotonic}}.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Exponential Functions}
+\textbf{\textit{Exponential Functions}} are a class of functions that can be described by:
+\begin{equation}
+P = P_0 a^t
+\end{equation}
+where $P_0$ is some initial quantity (value at $t=0$), and $a$ is the factor by which $P$ changes when $t$ is increased by 1. If $a > 1$, then exponential growth occurs. If $0 < a < 1$, then exponential decay is present. These functions can also be described by their concavity. If the ``opening" of the function points toward the positive $Y$-axis, then the function is \textbf{\textit{concave up}}. Similarly, if it points toward the negative $Y$-axis, then the function is \textbf{\textit{concave down}}.
+
+\vspace{0.1in}
+\textbf{\textit{Half-Life}} -- The time required for an exponentially decaying quantity to reach 50\% of the initial value, $P_0$.
+
+\textbf{\textit{Doubling Time}} -- The time required for an exponentially growing quantity to reach 200\% of the initial value, $P_0$.
+
+\vspace{0.1in}
+Some exponential functions use the natural number, $e \approx 2.71828$ as the base of the exponential quantity. Because this ensures the base is positive, then exponential growth may also occur when:
+\begin{equation}
+P = P_0 e^{kt}
+\end{equation}
+and exponential decay may occur when:
+\begin{equation}
+P = P_0 e^{-kt}
+\end{equation}
+This is true if $k>0$ and $t > 0$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{New Functions from Old}
+\textbf{\textit{Translations}} of functions occur though additive operations. \textbf{\textit{Stretches}} occur when a function is multiplied by a factor, $k$, when $k$ is not 0 or 1. \textbf{\textit{Reflections}} occur when a function is multiplied by a factor, $k$, when $k < 0$.
+
+\vspace{0.1in}
+\textbf{\textit{Composite Functions}} are functions that depend on quantities that can be described by other functions. The example given in the text is the following:
+\begin{align}
+\nonumber
+A = f(&r) = \pi r^2\\
+\nonumber
+r = g(t&) = 1+t\\
+\nonumber
+ A = \pi r^2 &= \pi \left(1 + t\right)^2\\
+\nonumber
+A = f\left(g\left(t\right)\right) = \pi &\left(g\left(t\right)\right)^2 = \pi \left(1 + t\right)^2
+\end{align}
+Here, the area of a circle, which is mathematically defined by $\pi r^2$, is used as the \textit{outside function}. $r\left(t\right)$ is the \textit{inside function} describes the radius as a \textbf{\textit{monotonically increasing}} quantity with time. Therefore, the area can also be described in terms of time using the definition of the \textbf{\textit{composite function}}.
+
+\vspace{0.1in}
+A function can be classified as \textbf{\textit{even}} or \textbf{\textit{odd}} if it is symmetrical about the $Y$-axis. \textbf{\textit{Even}} functions have the property of:
+\begin{equation}
+f(-x) = f(x)\hphantom{-} \forall x
+\end{equation}
+An example of this type of function is $\cos\left(x\right)$. On the other hand, \textbf{\textit{odd}} functions follow:
+\begin{equation}
+f(-x) =- f(x)\hphantom{-} \forall x
+\end{equation}
+An example of this type of function is  $\sin\left(x\right)$. Many functions are neither \textbf{\textit{even}} nor \textbf{\textit{odd}}.
+
+\vspace{0.1in}
+For a given function $f(x)$, the inverse of the function, $f^{-1}(x)$, is given by:
+\begin{equation}
+f^{-1}(y) = x\hphantom{-} ==\hphantom{-} y = f(x)
+\end{equation}
+Not all functions are invertible. For this to be true, $f(x)$ must be \textit{single-valued}, or each $y$ value uniquely corresponds to one $x$ value. More specifically, a function has an inverse if, and only if, it intersects any horizontal line at most once. Thus, lines of constant $y$ values cannot correspond to multiple $x$ values for the inverse to exist.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Logarithmic Functions}
+\textbf{\textit{Logarithmic Functions}} are the inverse of an exponential function, provided both functions share a common base. These functions are written out as:
+\begin{equation}
+\log_{10}x = k \hphantom{-} == \hphantom{-} 10^k = x
+\end{equation}
+where $k$ is a real number. Here, 10 is the common base of the logarithmic and exponential functions. The \textbf{\textit{Natural Logarithm}} uses the natural number, $e$, as its base. It is written as:
+\begin{equation}
+\ln x = k \hphantom{-} == \hphantom{-} e^c = x
+\end{equation}
+In logarithmic functions, $x > 0$ because no power of a real number results in zero, and negative values of $x$ are infeasible for positive bases with real exponents.
+
+\vspace{0.1in}
+The following table outlines the properties of \textbf{\textit{logarithmic functions}}:
+\begin{table*}[h]
+\begin{center}
+\begin{tabular}{lll}
+& \textbf{Base} $A$ & \textbf{Natural Logarithm}\\
+\hline
+1. & $\log\left(AB\right) = \log A + \log B$ & $\ln\left(AB\right) = \ln A + \ln B$\\
+2. &  $\log\left(\frac{A}{B}\right) = \log A - \log B$ & $\ln\left(\frac{A}{B}\right) = \ln A - \ln B$\\
+3. & $\log\left(A^p\right) = p \log A$ & $\ln \left(A^p\right) = p \ln A$\\
+4. & $\log_A\left(A^x\right) = x$ & $\ln e^x = x$\\
+5. & $10^{\log x} = x$ & $e^{\ln x} = x$
+\end{tabular}
+\end{center}
+\end{table*}
+
+These types of equations are useful when solving for unknown exponents.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Trigonometric Functions}
+The input of the basic trigonometric functions, $\sin$, $\cos$, and $\tan$ are angles, which are measured in \textbf{\textit{radians}} or \textbf{\textit{degrees}}. To convert between the two, this relationship is used:
+\begin{equation}
+1 \hphantom{-} \text{radian} = \frac{\pi}{180} \hphantom{-} \text{degrees}
+\end{equation}
+The angle of 1 \textbf{\textit{radian}} on a unit circle has an arc length of 1. Often, if no units are prescribed for an angular measurement, it is understood to be in \textit{\textbf{radians}}. The arclength equation is given by:
+\begin{equation}
+s = r\theta
+\end{equation}
+where $s$ is the arc length, $r$ is the radius of the circle, and $\theta$ is the angular measurement in radians. If a point $P$ on a circle has coordinates in an $(x, y)$ coordinate frame, then we can use the trigonometric functions to relate it's position with the angle $\theta$ by:
+\begin{align}
+\cos\theta &= x\\
+\sin\theta &= y
+\end{align}
+Because the equation of a circle is given by:
+\begin{equation}
+x^2 + y^2 = r^2
+\end{equation}
+a substitution using the trigonometric functions can be made:
+\begin{equation}
+\cos^2 \theta + \sin^2 \theta = r^2
+\end{equation}
+For a unit circle, which as a radius $r = 1$, this reduces to the trigonometric identity:
+\begin{equation}
+\cos^2 \theta + \sin^2 \theta = 1
+\end{equation}
+As $\theta$ increases, the values of $\sin\theta$ and $\cos\theta$ oscillate between $\left[-1, 1\right]$, and repeats every $2\pi$ \textbf{\textit{radians}} or $360^\circ$. Thus, $\sin \theta$ and $\cos \theta$ are \textit{periodic functions}, or functions that repeat their values after a regular interval.
+
+\vspace{0.1in}
+The \textbf{\textit{period}} of a \textit{periodic function} is the length of that regular interval. The \textbf{\textit{amplitude}} of the function is $\frac{1}{2}$ the distance between the function's maximum and minimum values. It should be noted that the $\sin$ and $\cos$ functions can be related through a \textbf{\textit{phase shift}}, or angular \textbf{\textit{translation}}:
+\begin{equation}
+\cos \theta = \sin\left(\theta + \frac{\pi}{2}\right)
+\end{equation}
+Functions whose shape can be described using $\sin\theta$ and $\cos\theta$ are given the name \textbf{\textit{sinusoidal functions}}. To summarize their properties:
+\begin{equation}
+f(\theta) = A\sin\left(B\theta\right) \hphantom{-} g(\theta) = A \cos\left(B\theta\right)
+\end{equation}
+where $|A|$ is the \textbf{\textit{amplitude}}, $\frac{2\pi}{|B|}$ is the period. Horizontal \textbf{\textit{translations}} occur when the argument $B\theta$ is replaced by $B\theta \pm h$. Vertical \textbf{\textit{translations}} occur when a constant $C$ is added to the functions:
+\begin{equation}
+f(\theta) = A\sin\left(B\theta\right) + C \hphantom{-} g(\theta) = A \cos\left(B\theta\right) + C
+\end{equation}
+The \textit{tangent function} is used as a relationship between \textit{sine} and \textit{cosine} functions. It is defined as:
+\begin{equation}
+\tan\theta=\frac{\sin\theta}{\cos\theta}
+\end{equation}
+This function has vertical \textit{asymptotes} at points where $\cos\theta = 0$, or $\forall \theta$ defined as $\pm \frac{(2n-1)\pi}{2}$, where $n \in \mathbb{N}$, or the set of \textit{Natural Numbers}. The $\tan$ function has a period of $\pi$ \textbf{\textit{radians}}.
+
+\vspace{0.1in}
+Trigonometric functions also have \textbf{\textit{inverse functions}}. These are used to find an angular value given the $(x,y)$ coordinates of a point:
+\begin{equation}
+\sin x = 0.45
+\end{equation}
+For the inverse $\sin$ function, which is commonly written as $\arcsin\theta$, $\text{a}\sin\theta$ or $\sin^{-1}\theta$, a domain of $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ is used. Thus, for $y \in \left[-1, 1\right]$:
+\begin{equation}
+\arcsin y = x \hphantom{-} == \hphantom{-} \sin x = y, \hphantom{-} x\in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]
+\end{equation}
+For the inverse $\cos$ function, which is commonly written as $\arccos\theta$, $\text{a}\cos\theta$ or $\cos^{-1}\theta$, the domain is also $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$, but the range is $x \in \left[0, \pi\right]$. Lastly, for the inverse $\tan$ function, commonly written as $\arctan\theta$, $\text{a}\tan\theta$ or $\tan^{-1}\theta$, a domain of $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ is used, but has a range $y \in \mathbb{R}$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Powers, Polynomials, and Rational\\Functions}
+A \textbf{\textit{power function}} is a function $f(x)$ where the \textbf{\textit{dependent variable}}, $y$ is proportional to a power of the \textbf{\textit{independent variable}}, $x$:
+\begin{equation}
+f(x) = kx^p
+\end{equation}
+where $k$ and $p$ are constant. Examples of these functions are the volume of a sphere:
+\begin{equation}
+V = \frac{4}{3}\pi r^3
+\end{equation}
+or Newton's Law of Gravitation:
+\begin{equation}
+F = kr^{-2} = \frac{k}{r^2}
+\end{equation}
+For functions of the form $x^n$, where $n$ is a positive integer, odd values of $n>1$ pass through the origin and can assume negative values these are \textbf{\textit{monotonically increasing functions}}. Even values of $n > 1$ also pass through the origin, but $\forall x < 0$, $f(x)$ is a \textbf{\textit{decreasing}} function, and $\forall x > 0$, $f(x)$ is \textbf{\textit{increasing}}. For large exponents $n$, the function value grows faster. Though \textbf{\textit{power functions}} may equal values greater than some arbitrary \textbf{\textit{exponential funtion}}, \textit{every} \textbf{\textit{exponential function}} will eventually dominate \textit{every} \textbf{\textit{power function}} at some value of $x$ if the base of the \textbf{\textit{exponential function}}, $a$, is greater than 1.
+
+\vspace{0.1in}
+\textbf{\textit{Polynomials}} are the sum of \textbf{\textit{power functions}} with non-negative integer exponents:
+\begin{equation}
+y = p(x) = a_nx^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0
+\end{equation}
+The highest exponent $n$ in a \textbf{\textit{polynomial}} is referred to as the\textbf{\textit{degree}} of the polynomial.
+
+\vspace{0.1in}
+\textbf{\textit{Rational Functions}} are ratios of \textbf{\textit{polynomials}}, $p(x)$ and $q(x)$:
+\begin{equation}
+f(x) = \frac{p(x)}{q(x)}
+\end{equation}
+These functions may have \textbf{\textit{horizontal or vertical asymptotes}} which occur when:
+\begin{equation}
+f(x) \rightarrow L \hphantom{-} \text{as} \hphantom{-} x \rightarrow \pm \infty
+\end{equation}
+for \textbf{\textit{horizontal asymptotes}} or
+\begin{equation}
+y \rightarrow \pm \infty \hphantom{-} \text{as} \hphantom{-} x \rightarrow K
+\end{equation}
+for \textbf{\textit{vertical asymptotes}}. Here, the horizontal asymptote is $y = L$, and the \textbf{\textit{vertical asymptote}} is $x = K$.
+The function behavior as $x \rightarrow \pm \infty$ is referred to as \textbf{\textit{end behavior}}.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Introduction to Continuity}
+This section focuses on the idea of \textbf{\textit{continuity}} along an interval, $[a, b]$, and at a point, $p$. \textbf{\textit{Continuous Functions}} have many desirable properties. For functions along an interval, a general rule of continuity is that a function is continuous along an interval $[a, b]$ if it has no breaks, jumps, or holes within that interval. Many functions are not continuous $\forall x$, such as $\frac{1}{x}$ , which is undefined at $x = 0$, but is continuous for any interval $[a, b]$ that does not contain 0. \textbf{\textit{Exponential}}, \textbf{\textit{power}}, and the \textit{sine} and \textit{cosine} functions are continuous along any interval $[a, b]$. \textbf{\textit{Rational functions}} are continuous on any interval that the denominator is non-zero. Functions derived via addition or multiplication of other continuous functions, and \textbf{\textit{composite functions}} are continuous if the functions used to create them are continuous.
+
+\vspace{0.1in}
+\textbf{\textit{Intermediate Value Theorem}} -- Assume $f(x)$ is continuous on a closed interval $[a, b]$. If $k$ is any number between $f(a)$ and $f(b)$, then $\exists$ at least one number $c \in [a, b]$ such that $f(c) = k$.
+
+\vspace{0.1in}
+A function is continuous if nearby values of the independent variable, $x$, give nearby values of the dependent variable, $y$. Continuity is important because it implies that small perturbations in $x$ do not result in large changes in $y$. To check continuity at a point, for example, $x = 2$, check nearby values to the left and right of that point, $x = 1.99, 1.98$ and $x = 2.01, 2.02$. If $f(x)$ changes significantly, then the function has a discontinuity at $x =2$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Limits}
+The idea of the \textbf{\textit{limit}} is fundamental to the study of Calculus. The \textbf{\textit{limit}} makes sense of a function ``approaching" a value. Limit notation is defined as:
+\begin{equation}
+\lim_{x \rightarrow c} f(x) = L
+\end{equation}
+which means the function $f(x)$ approaches the value $L$ as the independent variable, $x$ approaches the value $c$. $x$ is never equals $c$, but is infinitesimally close to it.
+
+\vspace{0.1in}
+A function $f$ is defined on an interval around $c$, except at the point $x = c$. The \textbf{\textit{limit}} of the function $f(x)$ as $x$ approaches $c$ is equal to a number $L$, should such a limit exist, such that $f(x)$ is as close to $L$ as we want whenever $x$ is sufficiently close to $c$. The distance between $f(x)$ and $L$ is given by:
+\begin{equation}
+\text{Distance} = |f(x) - L|
+\end{equation}
+which we want to be sufficiently close. The Greek letter $\epsilon$ is used to refer to small numbers; thus, we want:
+\begin{equation}
+|f(x) - L| < \epsilon
+\end{equation}
+to show limit convergence. Similarly, we want the following to be true:
+\begin{equation}
+|x - c| < \delta
+\end{equation}
+for a chosen value of $\delta$. The definition of the limit can then be rewritten as:
+
+\vspace{0.1in}
+\textbf{\textit{Limit}} -- The limit $\lim_{x\rightarrow c} f(x)$ is equal to the number $L$, if one exists, such that $\forall \epsilon > 0$ (as small as we want), there is a $\delta > 0$ (sufficiently small) such that if $|x - c| < \delta$ and $x \neq c$, then $|f(x) - L| < \epsilon$.
+
+\vspace{0.1in}
+\textbf{\textit{Limits}} have the following properties, assuming all the limits on the right-hand side exist:
+\begin{enumerate}
+\item If $b$ is constant, then $\lim_{x\rightarrow c}\left(bf(x)\right) = b\left(\lim_{x \rightarrow c}f(x)\right)$\\
+\vspace{-0.25in}
+\item $\lim_{x\rightarrow c}\left(f(x) + g(x)\right) = \lim_{x \rightarrow c} f(x) + \lim_{x \rightarrow c} g(x)$\\
+\vspace{-0.25in}
+\item  $\lim_{x\rightarrow c}\left(f(x) g(x)\right) =  \left(\lim_{x\rightarrow c}f(x)\right)\left(\lim_{x\rightarrow c}g(x)\right)$\\
+\vspace{-0.25in}
+\item  $\lim_{x\rightarrow c} \frac{f(x)}{g(x)} = \frac{\lim_{x\rightarrow c}f(x)}{\lim_{x\rightarrow c}g(x)}$, provided $\lim_{x\rightarrow c}g(x) \neq 0$\\
+\vspace{-0.25in}
+\item For any constant $k$, $\lim_{x\rightarrow c} k = k$\\
+\vspace{-0.25in}
+\item $\lim_{x\rightarrow c} x = c$
+\end{enumerate}
+
+\vspace{0.1in}
+\textbf{\textit{Limits}} can be taken from both the right and the left. The general form:
+\begin{equation}
+\lim_{x\rightarrow c} f(x) = L
+\end{equation}
+means that $f(x) \rightarrow L$ as $x \rightarrow c$ \textit{from both directions}. Piecewise-defined functions may have different values from the right or the left if the limit is taken at a jump discontinuity. To indicate a limit from the left, the following notation is used:
+\begin{equation}
+\lim_{x\rightarrow c^-} f(x) = L^-
+\end{equation}
+and from the right:
+\begin{equation}
+\lim_{x\rightarrow c^+} f(x) = L^+
+\end{equation}
+Again, the limit from the right or left is not guaranteed to converge to the same value, so $L^-$ and $L^+$ are used, but  $L^-$ may equal $L^+$.
+
+\vspace{0.1in}
+\textbf{\textit{Limits}} do not exist when there is no finite number $L$ that the function value assumes at the point the limit is taken. Sometimes, limits are taken at $\pm\infty$ to understand the \textbf{\textit{end behavior}} of a function $f(x)$. Here $\infty$ does not represent a number, just sufficiently large values of $x$. These limits are written as:
+\begin{equation}
+\lim_{x\rightarrow \pm\infty} f(x) = L
+\end{equation}
+if the limit, $L$, exists.
+
+\vspace{0.1in}
+Using this definition of the limit, \textbf{\textit{continuity}} of a function can be formally defined as:
+\textbf{\textit{Continuity}} -- A function $f(x)$ is continuous at $x = c$ if $f$ is defined at $x = c$ and if:
+\begin{equation}
+\lim_{x \rightarrow c} f(x) = f(c)
+\end{equation}
+If $c$ is an endpoint of an interval $[a, b]$, then a one-sided limit is used.
+
+\vspace{0.1in}
+Using the continuity of sums of products, we can show that any \textbf{\textit{polynomial}} is a continuous function. The following rules can be used to determine of more complicated functions, such as $\sin\theta$, $\cos\theta$, or $e^x$ are continuous, provided $f$ and $g$ are continuous on an interval $[a, b]$ and $b$ is constant:
+\begin{enumerate}
+\item $bf(x)$ is continuous\\
+\vspace{-0.25in}
+\item $f(x) + g(x)$ is continuous\\
+\vspace{-0.25in}
+\item $f(x)g(x)$ is continuous\\
+\vspace{-0.25in}
+\item $\frac{f(x)}{g(x)}$ is continuous, provided $g(x) \neq 0$ on the interval $[a,b]$.
+\end{enumerate}
+
+For \textbf{\textit{composite functions}}, if $f$ and $g$ are continuous and if the \textbf{\textit{composite function}} $f(g(x))$ is defined on an interval $[a, b]$, then $f(g(x))$ is continuous on $[a, b]$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
