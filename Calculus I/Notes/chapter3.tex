@@ -1,0 +1,566 @@
+%!TEX root = Calculus_I.tex
+\chapter{Short-Cuts to Differentiation}
+This chapter will cover simple rules that are used to take the \textbf{\textit{derivative}} for a variety of functions.
+
+\section{Powers and Polynomials}
+The \textbf{\textit{derivative}} of a constant multiple is given by:
+\begin{equation}
+\label{eq:ConstantMultDeriv}
+\frac{d}{dx}\left[c f(x)\right] = c f^\prime(x)
+\end{equation}
+%
+If $f(x)$ is \textbf{\textit{differentiable}} and $c$ is constant. This is a special case of the \textbf{\textit{Product Rule}}, which will be covered shortly. Proving this rule can be done using the definition of the \textbf{\textit{derivative}}:
+\begin{equation}
+\frac{d}{dx}\left[c f(x)\right] = \lim_{h \rightarrow 0} \frac{c f(x+h) - cf(x)}{h} = \lim_{h \rightarrow 0} c\frac{f(x+h) - f(x)}{h}
+\end{equation}
+%
+\begin{equation}
+\lim_{h \rightarrow 0} c\frac{f(x+h) - f(x)}{h} = c f^\prime(x)
+\end{equation}
+
+\vspace{0.1in}
+The derivative of two functions, $f(x)$ and $g(x)$, added or subtracted together, provided both $f(x)$ and $g(x)$ are \textbf{\textit{differentiable}}, is given by:
+%
+\begin{equation}
+\label{eq:SumDeriv}
+\frac{d}{dx}\left[f(x) + g(x)\right] = f^\prime(x) + g^\prime(x)
+\end{equation}
+%
+\begin{equation}
+\label{eq:DiffDeriv}
+\frac{d}{dx}\left[f(x) - g(x)\right] = f^\prime(x) - g^\prime(x)
+\end{equation}
+%
+Again, using the definition of the \textbf{\textit{derivative}}:
+\begin{equation}
+\frac{d}{dx}\left[f(x) + g(x)\right] = \lim_{h \rightarrow 0} \frac{\left[f(x+h) + g(x+h)\right] - \left[f(x) + g(x)\right]}{h}
+\end{equation}
+%
+\begin{equation}
+\label{eq:SumDiffLim}
+\lim_{h \rightarrow 0} \left[\frac{f(x+h) - f(x)}{h} + \frac{g(x+h) - g(x)}{h}\right]
+\end{equation}
+%
+where the limits of each term in Equation (\ref{eq:SumDiffLim}) approach $f^\prime(x)$ and $g^\prime(x)$.
+
+\vspace{0.1in}
+For equations containing powers of $x$, the \textbf{\textit{Power Rule}} can be used:
+\begin{equation}
+\label{eq:PowerRule}
+\frac{d}{dx}\left(x^n\right) = nx^{n-1}
+\end{equation}
+This is valid provided that $n$ is constant and $n \in \mathbb{R}$. Combining the rules shown in Equations (\ref{eq:ConstantMultDeriv}), (\ref{eq:SumDeriv}), (\ref{eq:DiffDeriv}), and (\ref{eq:PowerRule}), the \textbf{\textit{derivative}} of \textit{any \textbf{polynomial}} can be taken.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Exponential Function}
+Recall that \textbf{\textit{exponential functions}} are given by:
+\begin{equation}
+f(x) = a^x
+\end{equation}
+These are \textbf{\textit{monotonically increasing}} functions; thus, the \textbf{\textit{derivative}} must be strictly positive. Suppose we have a function, $f(x)$, given by:
+\begin{equation}
+f(x) = 2^x
+\end{equation}
+Using the definition of the \textbf{\textit{derivative}}:
+\begin{equation}
+f^\prime(x) = \lim_{h \rightarrow 0} \left(\frac{2^{x+h} - 2^x}{h}\right) = \lim_{h \rightarrow 0} \left(\frac{{2^x 2^h} - 2^x}{h}\right)
+\end{equation}
+%
+\begin{equation}
+\lim_{h \rightarrow 0} \left(\frac{2^h - 1}{h}\right)\cdot 2^x
+\end{equation}
+%
+Using this representation, we can approach the \textbf{\textit{limit}} of the coefficient of $2^x$ by taking small values of $h$:
+%
+\begin{table}[tb]
+\begin{center}
+\caption{Evaluations of coefficient $\frac{2^h - 1}{h}$ for various values of $h$}
+\begin{tabular}{l|c}
+\hline
+$h$ & $\frac{2^h - 1}{h}$\\
+\hline
+-0.1 & 0.6697\\
+-0.01 & 0.6908\\
+-0.001 & 0.6929\\
+0.001 & 0.6934\\
+0.01 & 0.6956\\
+0.1 & 0.7177\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%
+This suggests that the \textbf{\textit{limit}} of $\frac{2^h - 1}{h}$ as $h \rightarrow 0$ is approximately 0.693. Thus:
+%
+\begin{equation}
+g^\prime(x) = \frac{d}{dx} \left(0.693\cdot 2^x\right)
+\end{equation}
+%
+Applying Equation (\ref{eq:ConstantMultDeriv}) to this expression means that only the \textbf{\textit{derivative}} of $2^x$ must be taken. This indicates that the \textbf{\textit{derivative}} of an \textbf{\textit{exponential function}} depends upon the function itself. In the general form:
+\begin{equation}
+f(x) = a^x
+\end{equation}
+\begin{equation}
+f^\prime(x) = \lim_{h \rightarrow 0} \left(\frac{a^{x+h} - a^x}{h}\right) = \lim_{h \rightarrow 0}\left(\frac{a^h - 1}{h}\right)\cdot a^x
+\end{equation}
+%
+\begin{table}[b]
+\begin{center}
+\caption{Limit evaluations of coefficient $\frac{a^h - 1}{h}$ for various values of $a$}
+\label{tab:GenFormExponentialLims}
+\begin{tabular}{l|c}
+\hline
+$a$ & $\lim_{h \rightarrow 0}\frac{a^h - 1}{h}$\\
+\hline
+2 & 0.693\\
+3 & 1.099\\
+4 & 1.386\\
+5 & 1.609\\
+6 & 1.792\\
+7 & 1.946\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%
+Looking at Table~\ref{tab:GenFormExponentialLims} indicates that there is a number, $a$, between 2 and 3 such that $\lim_{h \rightarrow 0}\frac{a^h - 1}{h}$ is 1. Thus:
+%
+\begin{equation}
+a^h - 1 \approx h, \hphantom{-} h \ll 1
+\end{equation}
+%
+\begin{equation}
+a^h \approx 1+h
+\end{equation}
+%
+\begin{equation}
+\label{eq:NaturalNumberDefinition}
+a \approx \left(1+h\right)^{\frac{1}{h}}
+\end{equation}
+%
+Taking the \textbf{\textit{limit}} of Equation~(\ref{eq:NaturalNumberDefinition}) results in the values shown in Table~\ref{tab:NaturalNumberDefinition}
+%
+\begin{table}[b]
+\begin{center}
+\caption{Evaluations of coefficient $\left(1+h\right)^{\frac{1}{h}}$ for various values of $h$}
+\label{tab:NaturalNumberDefinition}
+\begin{tabular}{l|c}
+\hline
+$h$ & $\left(1+h\right)^{\frac{1}{h}}$\\
+\hline
+-0.001 & 2.7196422\\
+-0.0001 & 2.7184178\\
+-0.00001 & 2.7182954\\
+0.00001 & 2.7182682\\
+0.0001 & 2.7181459\\
+0.001 & 2.7169239\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%
+We observe that $a \approx 2.718$. This is referred to as the \textbf{\textit{Natural Number}}, $e$. Using the \textbf{\textit{derivative}} relationships shown previously:
+\begin{equation}
+\frac{d}{dx}\left(e^x\right) = e^x
+\end{equation}
+%
+To adjust this expression for various values of $a$, we use a combination of the \textbf{\textit{limit}} and \textbf{\textit{derivative}} defintions previously presented and properties of logarithms:
+%
+\begin{equation}
+f^\prime(x) = \lim_{h \rightarrow 0} \frac{a^{x+h} - a^x}{h} = \left(\lim_{h \rightarrow 0} \frac{a^h - 1}{h} \right)a^x
+\end{equation}
+%
+\begin{equation}
+a = e^{\ln a}
+\end{equation}
+%
+\begin{equation}
+\lim_{h \rightarrow 0} \frac{\left(e^{\ln a}\right)^h - 1}{h} =  \lim_{h \rightarrow 0} \frac{e^{\left({\ln a}\right)h} - 1}{h}
+\end{equation}
+%
+From the definition of the \textbf{\textit{Natural Number}}, $e$:
+%
+\begin{equation}
+\lim_{h \rightarrow 0} \frac{e^h - 1}{h} = 1
+\end{equation}
+%
+Substituting $t = (\ln a) \cdot h$:
+%
+\begin{equation}
+\lim_{h \rightarrow 0}\frac{e^{\left(\ln a\right)h} - 1}{h} = \lim_{t \rightarrow 0} \frac{e^t - 1}{t / \ln a} = \lim_{t \rightarrow 0}\left(\ln a \cdot \frac{e^t - 1}{t}\right)
+\end{equation}
+%
+\begin{equation}
+= \ln a \left(\lim_{t \rightarrow 0} \frac{e^t - 1}{t}\right) = (\ln a) \cdot 1 = \ln a
+\end{equation}
+%
+Thus:
+%
+\begin{equation}
+\frac{d}{dx}\left(a^x\right) = (\ln a)a^x
+\end{equation}
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Product and Quotient Rules}
+Recall the Greek symbol $\Delta$ refers to the change in a quantity. For a function $f(x)$, the change in the function can be written as:
+%
+\begin{equation}
+\Delta f = f(x+h) - f(x)
+\end{equation}
+%
+for small values of $h$. Using this notation, we can arrive at the definition of the \textbf{\textit{derivative}} as:
+%
+\begin{equation}
+f^\prime(x) = \lim_{h \rightarrow 0} \frac{\Delta f}{h}
+\end{equation}
+%
+Suppose we know the \textbf{\textit{derivatives}} of two functions, $f(x)$ and $g(x)$, but we want to calculate the \textbf{\textit{derivative}} of their product, $f(x)g(x)$. A proof of this is included in the text these notes are based on (see Mechanical-Engineering-Curriculum/Calculus_I/README.md), but the \textbf{\textit{Product Rule}} can be used to determine this \textbf{\textit{derivative}}. The proof uses the definition of the \textbf{\textit{limit}}, but the \textbf{\textit{Product Rule}} is given as:
+%
+\begin{equation}
+(fg)^\prime = f^\prime g + fg^\prime
+\end{equation}
+%
+provided that $u = f(x)$ and $v = g(x)$ are \textbf{\textit{differentiable}}. Using \textbf{\textit{Leibniz's Notation}}:
+%
+\begin{equation}
+\frac{d(uv)}{dx} = \frac{d}{dx}(uv)= \frac{du}{dx} \cdot v + u \cdot \frac{dv}{dx}
+\end{equation}
+%
+Similarly, the \textbf{\textit{Quotient Rule}} is the inverse of the \textbf{\textit{Product Rule}}. If a function $Q(x) = \frac{f(x)}{g(x)}$ exists, and $u = f(x)$ and $v =g(x)$ are \textbf{\textit{differentiable}} then the \textbf{\textit{Quotient Rule}} is given as:
+%
+\begin{equation}
+\left(\frac{f}{g}\right)^\prime = \frac{f^\prime g - f g^\prime}{g^2}
+\end{equation}
+%
+Representing this in \textbf{\textit{Leibniz's Notation}}:
+%
+\begin{equation}
+\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{\frac{du}{dx} \cdot v - u \frac{dv}{dx}}{v^2}
+\end{equation}
+%
+Note that some expressions are likely to be easier handled by one rule over another, but equations can also be re-written such that multiplicative operations appear as division, such as:
+%
+\begin{equation}
+\frac{1}{x} = x^{-1}
+\end{equation}
+%
+Here, the \textbf{\textit{derivative}} of the right-hand side can be easily computed using the \textbf{\textit{Quotient Rule}}, but the left-hand side is in the form of the \textbf{\textit{Power Rule}}, but both expressions are equivalent.
+%
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Chain Rule}
+The \textbf{\textit{Chain Rule}} is used to take the \textbf{\textit{derivative}} of \textbf{\textit{composite functions}}. Suppose $f(g(x))$ is a \textbf{\textit{composite function}}. Then, substituting $z = g(x)$ yields:
+%
+\begin{equation}
+y = f(z)
+\end{equation}
+%
+Because $z$ is a function of $x$, a small change in $x$, $\Delta x$ will result in a small change in $z$, $\Delta z$. In turn, $\Delta z$ results in a small change in the dependent variable, $y$, because $y = f(z)$. If $\Delta x$ and $\Delta z$ are not identically zero, then:
+%
+\begin{equation}
+\frac{\Delta y}{\Delta x} = \frac{\Delta y}{\Delta z} \cdot \frac{\Delta z}{\Delta x}
+\end{equation}
+%
+Because $\frac{dy}{dx} = \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x}$, as these three differentials get closer to zero the \textbf{\textit{Chain Rule}} can be defined as:
+%
+\begin{equation}
+\frac{dy}{dx} = \frac{dy}{dz} \cdot \frac{dz}{dx}
+\end{equation}
+%
+Furthermore, because $\frac{dy}{dz} = f^\prime(z)$ and $\frac{dz}{dx} = g^\prime(x)$:
+%
+\begin{equation}
+\frac{d}{dx}\left(f\left(g\left(x\right)\right)\right) = f^\prime\left(z\right) \cdot g^\prime(x)
+\end{equation}
+%
+Back-substituting $z = g(x)$ yields:
+%
+\begin{equation}
+\frac{d}{dx}\left(f\left(g\left(x\right)\right)\right) = f^\prime \left(\left(g\left(x\right)\right)\right) \cdot g^\prime(x)
+\end{equation}
+%
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Trigonometric Functions}
+This section is concerned with the \textbf{\textit{derivatives}} of the $sine$ and $cosine$ functions. Because these functions are periodic, their \textbf{\textit{derivatives}} must also be periodic. This can be done by looking at the graph of the functions and taking the \textbf{\textit{limit}} at multiple points for small changes from the point, $h$. Note that the relationships between the\textit{sine} and \textit{cosine} functions and the Unit Circle require $x$ to be in \textbf{\textit{radians}}.
+
+\vspace{0.1in}
+Taking the limit at multple points along the $sine$ function's domain of $[0, 2\pi]$ results in the following relationship:
+%
+\begin{equation}
+\frac{d}{dx}\left(\sin(x)\right) = \cos(x)
+\end{equation}
+%
+Following a similar process for the $cosine$ function:
+%
+\begin{equation}
+\frac{d}{dx}\left(\cos(x)\right) = -\sin(x)
+\end{equation}
+%
+The \textbf{\textit{derivative}} of \textit{cosine} is $-\sin$ because of the phase shift between the two functions. Recall that:
+%
+\begin{equation}
+\cos(x) = \sin\left(x + \frac{\pi}{2}\right)
+\end{equation}
+%
+Also note that the \textbf{\textit{Chain Rule}} must be used to differentiate the trigonometric functions because they are \textbf{\textit{composite functions}}. For the \textit{tangent} function, which is defined as:
+%
+\begin{equation}
+\tan(x) = \frac{\sin(x)}{\cos(x)}
+\end{equation}
+%
+the \textbf{\textit{Quotient Rule}} can be easily used. It results in the following:
+%
+\begin{equation}
+\frac{d}{dx}\left(\tan(x)\right) = \frac{d}{dx}\left(\frac{\sin(x)}{\cos(x)}\right)
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\tan(x)\right) = \frac{\left(\sin(x)\right)^\prime \cdot \left(\cos(x)\right) - \left(\sin(x)\right) \cdot \left(\cos(x)\right)^\prime}{\cos^2(x)}
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\tan(x)\right) = \frac{\sin^2(x) + \cos^2(x)}{\cos^2(x)} = \frac{1}{\cos^2(x)}
+\end{equation}
+%
+Again, these relationships require $x$ to be in \textbf{\textit{radians}}.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Chain Rule and Inverse Functions}
+We will now apply the \textbf{\textit{Chain Rule}} to calculate \textbf{\textit{derivatives}} of \textbf{\textit{logarithmic functions}}, \textbf{\textit{exponential functions}}, and the \textbf{\textit{inverse trigonometric functions}}. A general rule for the \textbf{\textit{derivative}} of any \textbf{\textit{inverse function}} will also be shown.
+
+\vspace{0.1in}
+Recall that, using the properties of \textbf{\textit{logarithms}}, we can write:
+%
+\begin{equation}
+e^{\ln x} = x
+\end{equation}
+%
+To arrive at the \textbf{\textit{derivative}} of $\ln x$, we will use the equation $e^{\ln x} = x$:
+%
+\begin{equation}
+\frac{d}{dx}\left(e^{\ln x}\right) = \frac{d}{dx}\left(x\right)
+\end{equation}
+%
+\begin{equation}
+e^{\ln x} \cdot \frac{d}{dx}\left(\ln x\right) = 1
+\end{equation}
+%
+Thus:
+%
+\begin{equation}
+\frac{d}{dx} \left(\ln x \right) = \frac{1}{e^{\ln x}} = \frac{1}{x}
+\end{equation}
+%
+
+For \textbf{\textit{derivatives}} of the \textbf{\textit{inverse trigonometric functions}}, $\arcsin(x)$, $\arccos(x)$, and $\arctan(x)$, we can utilize several trigonometric identities. For the \textbf{\textit{derivative}} of $\arctan(x)$, note that $\tan(\arctan(x)) = x$. Differentiation via the \textbf{\textit{Chain Rule}} yields:
+%
+\begin{equation}
+\frac{1}{\cos^2(\arctan(x))} \cdot \frac{d}{dx}\left(\arctan(x)\right) = 1
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\arctan(x)\right) = \cos^2(\arctan(x))
+\end{equation}
+%
+The trigonometric identity $1 + \tan^2(\theta) = \frac{1}{\cos^2(\theta)}$ can be used here, replacing $\theta$ with $\arctan(x)$; thus:
+%
+\begin{equation}
+\cos^2(\arctan(x)) = \frac{1}{1 + \tan^2(\arctan(x))} = \frac{1}{1 + x^2}
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\arctan(x)\right) = \cos^2(\arctan(x)) = \frac{1}{1 + x^2}
+\end{equation}
+%
+Following a similar process for $\arcsin(x)$ and $\arccos(x)$:
+%
+\begin{equation}
+\frac{d}{dx}\left(\arcsin(x)\right) = \frac{1}{\sqrt{1-x^2}}
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\arccos(x)\right) = -\frac{1}{\sqrt{1-x^2}}
+\end{equation}
+%
+For general \textbf{\textit{inverse functions}}, if a function, $f(x)$, has a \textbf{\textit{differentiable inverse}}, $f^{-1}$, its \textbf{\textit{derivative}}, $f\left(f^{-1}(x)\right) = x$ by the \textbf{\textit{Chain Rule}}:
+%
+\begin{equation}
+\frac{d}{dx}\left(f\left(f^{-1}\left(x\right)\right)\right) = 1
+\end{equation}
+%
+\begin{equation}
+f^\prime\left(f^{-1}\left(x\right)\right) \cdot \frac{d}{dx}\left(f^{-1}\left(x\right)\right) = 1
+\end{equation}
+%
+Therefore:
+%
+\begin{equation}
+\frac{d}{dx}\left(f^{-1}\left(x\right)\right) = \frac{1}{f^\prime\left(f^{-1}\left(x\right)\right)}
+\end{equation}
+%
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Implicit Functions}
+So far, the functions presented have been considered \textbf{\textit{explicit functions}} of $x$, functions of the form $y = f(x)$. This section addresses \textbf{\textit{implicit functions}}, where one $x$ value corresponds to multiple $y$ values. An example of an \textbf{\textit{implicit function}} is the equation of a circle:
+%
+\begin{equation}
+\label{eq:circle}
+x^2 + y^2 = r^2
+\end{equation}
+%
+Here, $y$ is a function of $x$ on both the top and bottom halves of the circle, buy when the circle is considered as a whole, as in Equation~(\ref{eq:circle}), where the function does not have a tangent lineat each point, but the equation is still \textbf{\textit{differentiable}} with respect to $x$:
+%
+\begin{equation}
+\label{eq:circle_derivative}
+\frac{d}{dx}\left(x^2\right) + \frac{d}{dx}\left(y^2\right) = \frac{d}{dx}\left(r^2\right)
+\end{equation}
+%
+Because $r$ is a constant of the circle, \textbf{\textit{differentiation}} results in the right-hand side of Equation~(\ref{eq:circle_derivative}) goes to zero. If $y$ is treated as a function of $x$, and the \textbf{\textit{Chain Rule}} is used:
+%
+\begin{equation}
+2x + 2y\frac{dy}{dx} = 0
+\end{equation}
+%
+Solving this for the $\frac{dy}{dx}$ yields:
+%
+\begin{equation}
+\frac{dy}{dx} = -\frac{x}{y}
+\end{equation}
+%
+This relationship is valid, provided $y \neq 0$. This is expected because the line tangent to the circle at this point is vertical, so the \textbf{\textit{slope}} is infinite.
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Hyperbolic Functions}
+The \textbf{\textit{Hyperbolic Functions}} are combinations of $e^x$ and $e^{-x}$. \textit{Hyperbolic Sine}, abbreviated $\sinh(x)$, and \textit{Hyperbolic Cosine}, abbreviated $\cosh(x)$, are given by:
+%
+\begin{equation}
+\label{eq:sinh}
+\sinh(x) = \frac{e^x - e^{-x}}{2}
+\end{equation}
+%
+\begin{equation}
+\label{eq:cosh}
+\cosh(x) = \frac{e^x + e^{-x}}{2}
+\end{equation}
+%
+Observing properties of these functions graphically, and recalling that $\frac{d}{dx}\left(e^x\right) = e^x$, the following results hold:
+\begin{table}[H]
+\begin{center}
+\caption{Properties of $\sinh(x)$ and $\cosh(x)$}
+\begin{tabular}{c|c}
+$\cosh(0) = 1$ & $\sinh(0) = 0$\\
+$\cosh(-x) = \cosh(x)$ & $\sinh(-x) = -\sinh(x)$\\
+$\frac{d}{dx}\left(\cosh(x)\right) = \sinh(x)$ & $\frac{d}{dx}\left(\sinh(x)\right) = \cosh(x)$
+\end{tabular}
+\end{center}
+\end{table}
+%
+Furthermore, the it can be shown that the following result is true:
+%
+\begin{equation}
+\cosh^2(x) - \sinh^2(x) = 1
+\end{equation}
+%
+The \textit{Hyperbolic Tangent} function can also be defined, and is given by:
+%
+\begin{equation}
+\tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+\end{equation}
+%
+It's derivative is given by:
+%
+\begin{equation}
+\frac{d}{dx}\left(\tanh(x)\right) = \frac{d}{dx}\left(\frac{\sinh(x)}{\cosh(x)}\right) = \frac{\left(\cosh(x)\right)^2 - \left(\sinh(x)\right)^2}{\left(\cosh(x)\right)^2}
+\end{equation}
+%
+\begin{equation}
+\frac{d}{dx}\left(\tanh(x)\right) = \frac{1}{\cosh^2(x)}
+\end{equation}
+%
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Linear Approximation and the Derivative}
+When zooming into the graph of a \textbf{\textit{differentiable}} function, if the change between numbers is small enough $(\Delta x \rightarrow 0)$, the graph will look more and more like a line. This idea of \textbf{\textit{local linearity}} is commonly used to approximate the \textbf{\textit{slope}} or \textbf{\textit{derivative}} of a function $f(x)$ at a specific point, $x = a$ and function values near that point, $y = f(a+h)$. The \textbf{\textit{Tangent Line Approximation}} is given by:
+%
+\begin{equation}
+f(x) \approx f(a) + f^\prime(a)(x - a)
+\end{equation}
+%
+provided that $f(x)$ is \textbf{\textit{differentiable}} at $x = a$. The resulting error in the approximation is given by:
+%
+\begin{equation}
+E(x) = f(x) - f(a) - f^\prime(a)(x-a)
+\end{equation}
+%
+More information about this error approximation will be discussed in the Calculus II course.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Theorems about Differentiable Functions}
+The \textbf{\textit{Mean Value Theorem}} states that if $f(x)$ is \textbf{\textit{continuous}} on $[a, b]$, and is \textbf{\textit{differentiable}} on $(a, b)$, then a number $c$ exists such that:
+%
+\begin{equation}
+f^\prime(c) = \frac{f(b) - f(a)}{b -a}
+\end{equation}
+%
+which is the slope of the secant line between points $x=a$, and $x=b$. This theorem does not indicate how to find $c$, though.
+
+\vspace{0.1in}
+The \textbf{\textit{Increasing Function Theorem}} states that if a function $f(x)$ is \textbf{\textit{continuous}} on $[a, b]$, and is \textbf{\textit{differentiable}} on $(a, b)$, then:
+%
+\begin{enumerate}
+\item If $f^\prime(x) > 0 \hphantom{-} \forall x \in (a, b)$, then $f$ is \textbf{\textit{increasing}} on $[a, b]$.\\
+\vspace{-0.25in}
+\item If $f^\prime(x) \geq 0\hphantom{-}  \forall x \in (a, b)$, then $f$ is \textbf{\textit{non-decreasing}} on $[a,b]$.
+\end{enumerate}
+%
+
+\vspace{0.1in}
+The \textbf{\textit{Constant Function Theorem}} states that if a function $f(x)$ is \textbf{\textit{continuous}} on $[a, b]$, and is \textbf{\textit{differentiable}} on $(a, b)$, then if $f^\prime(x) = 0 \hphantom{-} \forall x \in [a, b]$, then $f$ is constant on $x \in [a, b]$.
+
+\vspace{0.1in}
+The \textbf{\textit{Racetrack Principle}} states that for two functions, $g(x)$, and $h(x)$, that are \textbf{\textit{continuous}} on $[a, b]$, and is \textbf{\textit{differentiable}} on $(a, b)$, and that $g^\prime(x) \leq h^\prime(x) \hphantom{-} \forall x \in (a, b)$:
+%
+\begin{enumerate}
+\item If $g(a) = h(a)$, then $g(x) \leq h(x) \hphantom{-} \forall x \in [a, b]$.\\
+\vspace{-0.25in}
+\item If $g(b) = h(b)$, then $g(x) \geq h(x) \hphantom{-} \forall x \in [a,b]$.
+\end{enumerate}
+%
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
