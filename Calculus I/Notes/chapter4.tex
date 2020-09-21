@@ -1,0 +1,256 @@
+%!TEX root = Calculus_I.tex
+\chapter{Using the Derivative}
+This chapter will cover
+
+\section{Using First and Second Derivatives}
+Recall from Chapter 2 that:
+%
+\begin{enumerate}
+\item If $f^\prime > 0$ $\forall x \in [a, b]$, then $f(x)$ is \textbf{\textit{monotonically increasing}} on that interval\\
+\item If $f^\prime < 0$ $\forall x \in [a, b]$, then $f(x)$ is \textbf{\textit{monotonically decreasing}} on that interval\\
+\item If $f^{\prime\prime} > 0$ $\forall x \in [a, b]$, then $f(x)$ is \textbf{\textit{concave up}} on that interval\\
+\item If $f^{\prime\prime} < 0$ $\forall x \in [a, b]$, then $f(x)$ is \textbf{\textit{concave down}} on that interval
+\end{enumerate}
+%
+We can combine these principles along with the general derivation formulas we discussed in Chapter 3.
+
+\vspace{0.1in}
+Often, the \textbf{\textit{local maxima}} or \textbf{\textit{local minima}} are points of interest for a given function, if they exist. Suppose $p$ is a point in the domain of $f(x)$; $p \in [a, b]$. Then:
+%
+\begin{enumerate}
+\item $f(x)$ has a \textbf{\textit{local minimum}} at $p$ if $f(p \pm \Delta) > f(p)$.
+\item $f(x)$ has a \textbf{\textit{local maximum}} at $p$ if $f(p \pm \Delta) < f(p)$.
+\end{enumerate}
+%
+These definitions of the \textbf{\textit{maxima}} and \textbf{\textit{minima}} are \textbf{\textit{local}} because these relationships do not provide any information outside of the near vicinity of point $p$.
+
+\vspace{0.1in}
+\textbf{\textit{Local maxima}} or \textbf{\textit{local minima}}, as well as other important points of a function, are commonly referred to as \textbf{\textit{critical points}}. These points are identified by the \textbf{\textit{derivative}}. For any function, $f(x)$, \textbf{\textit{critical points}} are located at points $p$ satisfying:
+%
+\begin{enumerate}
+\item $f^\prime(p) = 0$\\
+\item $f^\prime(p)$ is undefined
+\end{enumerate}
+%
+The \textbf{\textit{critical values}} of a function are found by evaluating $f(p)$ at each \textbf{\textit{critical point}}, $p$. Note that not every \textbf{\textit{critical point}} is a \textbf{\textit{maximum}} or \textbf{\textit{minimum}}.
+
+\vspace{0.1in}
+Suppose we wanted to find all of the \textbf{\textit{extrema}} of a function. This can be done using both $f^\prime(x)$ and $f^{\prime\prime}
+(x)$. When performing the \textbf{First-Derivative Test}, assume that $p$ is a \textbf{\textit{critical point}} in the domain of $f(x)$; $p \in [a, b]$. Then, assuming $x$ is increasing:
+%
+\begin{enumerate}
+\item If $f^\prime(x)$ changes sign from negative to positive at $p$, then $p$ is a \textbf{\textit{local minimum}} of $f(x)$.\\
+\item If $f^\prime(x)$ changes sign from positive to negative at $p$, then $p$ is a \textbf{\textit{local maximum}} of $f(x)$.
+\end{enumerate}
+%
+The \textbf{Second-Derivative Test} also provides curvature information about the function. Again, assuming that $p$ is a \textbf{\textit{critical point}} in the domain of $f(x)$; $p \in [a, b]$:
+%
+\begin{enumerate}
+\item If $f^\prime(p) = 0$ and $f^{\prime\prime}(p) > 0$, then $f$ has a \textbf{\textit{local minimum}} at $p$.\\
+\item If $f^\prime(p) = 0$ and $f^{\prime\prime}(p) < 0$, then $f$ has a \textbf{\textit{local maximum}} at $p$.\\
+\item If $f^\prime(p) = 0$ and $f^{\prime\prime}(p) = 0$, then the \textbf{Second-Derivative Test} does not result in a conclusion.
+\end{enumerate}
+%
+\textbf{\textit{Inflection Points}} are defined at places that the function, $f$, changes \textbf{\textit{concavity}}. These occur when $f^{\prime\prime} = 0$ or $f^{\prime\prime}$ is undefined.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Optimization}
+Some functions have maximum or minimum values across its domain, meaning the functions do not grow or decay to $\pm\infty$. These maximum or minimum values are referred to as \textbf{\textit{extrema}} or \textbf{\textit{optimal values}}. Practical applications of finding these \textbf{\textit{extrema}} are to minimize weight of an airplane or maximize the profit of an investment. The \textbf{Extreme Value Theorem} is used to describe when \textbf{\textit{extrema}} exist:
+\vspace{0.1in}
+\textbf{Extreme Value Theorem}: If $f$ is \textbf{\textit{continuous}} on the closed interval, $a \leq x \leq b$, then $f$ has a \textbf{\textit{global maximum}} and \textbf{\textit{global minimum}} on that interval.
+
+\vspace{0.1in}
+The \textbf{\textit{critical points}} of the function are first found using the \textbf{First-Derivative Test}. Then, the function values are evaluated at each of the \textbf{\textit{critical points}} and the endpoints of the domain, $a$ and $b$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Families of Functions}
+\textbf{\textit{Families of Functions}} are defined by functions that all have similar terms. An example is the set of quadratic functions, which follow the form of:
+%
+\begin{equation}
+f(x) = ax^2 + bx + c
+\end{equation}
+%
+where $a$, $b$, and $c$ are constants. Different combinations of $a$, $b$, and $c$ represent unique members of the \textbf{\textit{family of functions}}. Because there are an infinite amount of constant values, there are an infinite amount of quadratic functions. Different \textbf{\textit{families of functions}} are commonly used in mathematical modeling of some system or event. Some examples of these are probabalistic theory, kinematic motion, or population density.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Optimization, Geometry, and Modeling}
+The practice of \textbf{\textit{Optimization}} can be applied to a variety of problems. One common example of this in the field of geometry is minimizing or maximizing the surface area or volume of a given shape. To do this, a mathematical model of how surface area and volume change with other parameters is required. These \textbf{\textit{optimization}} problems often have constraints, such as maximum or minimum dimensions or the shape must have have at least a certain volume.
+
+\vspace{0.1in}
+A common technique to solve \textbf{\textit{optimization}} problems is to apply the \textbf{First-Derivative Test} to find the \textbf{\textit{critical points}} of a function; where $f^\prime(x) = 0$, and then testing the possible optimal solutions for the maximum or minimum function value.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Applications to Marginality}
+In the world of business, decisions are often made based on \textbf{\textit{revenue}} or \textbf{\textit{cost}} of a project or investment. The \textbf{\textit{derivative}} can be used to maximize \textbf{\textit{profit}}, the difference between \textbf{\textit{revenue}} or \textbf{\textit{cost}}:
+%
+\begin{equation}
+\text{Profit} = \text{Revenue} - \text{Cost}
+\end{equation}
+%
+\textbf{\textit{Cost}} represents the total cost of producing a quantity, $q$, of some good. The more goods are made, the higher the \textbf{\textit{cost}}, so $C(q)$ is an increasing function. Many \textbf{\textit{cost functions}}, $C(q)$, have \textbf{\textit{fixed costs}}, or costs that are incurred before the first good is produced. This represents things like facility cost or hardware/software or material investments to create the good.
+
+\vspace{0.1in}
+The \textbf{\textit{Revenue Function}}, $R(q)$, represents the total value for selling a good:
+%
+\begin{equation}
+\text{Revenue} = \text{Price} * \text{Quantity}
+\end{equation}
+%
+Sometimes, the price, $p$, of an item can depend on the quantity, $q$, sold. Accessing the \textbf{\textit{profit}} of producing the next good, based on the current \textbf{\textit{cost}} and \textbf{\textit{revenue}} is referred to as \textbf{\textit{Marginal Analysis}}. This is performed using the definition of the \textbf{\textit{derivative}}. The \textbf{\textit{Marginal Cost}} is given by:
+%
+\begin{equation}
+\text{MC} = \frac{C(q+1) - C(q)}{(q+1) - q}
+\end{equation}
+%
+\begin{equation}
+\nonumber
+\text{MC} = C^\prime(q) \approx C(q+1) - C(q)
+\end{equation}
+%
+Likewise, \textbf{\textit{Marginal Revenue}} is given by:
+%
+\begin{equation}
+\text{MR} = \frac{R(q+1) - R(q)}{(q+1) - q}
+\end{equation}
+%
+\begin{equation}
+\nonumber
+\text{MR} = R^\prime(q) \approx R(q+1) - R(q)
+\end{equation}
+%
+It can be shown that the maximum \textbf{\textit{profit}} occurs when:
+%
+\begin{equation}
+\text{MR}= \text{MC}
+\end{equation}
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Rates and Related Rates}
+Because \textbf{\textit{derivatives}} represent rates of change, they can be used to represent the rates of different observable and quantifiable situations. This includes ideas like change in volume of a melting snowball, the distance an object travels over time due to changes in velocity and acceleration, the fluid level of a tank as it is expelling its contents, and so on.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{L'Hopital's Rule, Growth, and Dominance}
+Suppose we want to evaluate the \textbf{\textit{limit}} of a function exactly of a quantity as it approaches a point where the function is not defined, such as:
+%
+\begin{equation}
+\lim_{x \rightarrow 0} \frac{e^{2x} - 1}{x}
+\end{equation}
+%
+This yields $\frac{0}{0}$, which does not make mathematical sense. Though the \textbf{\textit{limit}} can be approximated by taking values near the desired evaluation point, it can be calculated exactly by applying the principle of \textbf{\textit{local linearity}}.
+
+\vspace{0.1in}
+By replacing the numerator and denominator with two functions, $f(x)$ and $g(x)$, we can approximate the limit by the ratio of the corresponding $y$-values. Taking $f^\prime(x)$ and $g^\prime(x)$ as a tangent-line approximation, we see that:
+%
+\begin{equation}
+\frac{f(x)}{g(x)} = \frac{e^{2x} - 1}{x} \approx \frac{2x}{x} = \frac{2}{1} = \frac{f^\prime(0)}{g^\prime(0)}
+\end{equation}
+Thus, we arrive at:
+%
+\begin{equation}
+\lim_{x \rightarrow 0} \frac{e^{2x} - 1}{x} = 2
+\end{equation}
+%
+This technique is referred to as \textbf{\textit{L'Hopital's Rule}}, which is formally defined as:
+%
+
+\vspace{0.1in}
+\textbf{L'Hopital's Rule}: if $f$ and $g$ are \textbf{\textit{differentiable}}, $f(a) = g(a) = 0$, and $g^\prime(a) \neq 0$, then:
+%
+\begin{equation}
+\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \frac{f^\prime(a)}{g^\prime(a)}
+\end{equation}
+%
+This requires that the right-hand \textbf{\textit{limit}} exists. \textbf{\textit{L'Hopital's Rule}} also applies to limits that approach $\pm \infty$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Parametric Equations}
+\textbf{\textit{Parametric Equations}} are commonly used to represent motion in the $xy$-plane because motion is a function of time. Thus, if $x = f(t)$ and $y = g(t)$ then at time $t$, the object can be located at point $\left(f(t), g(t)\right)$. The \textit{parameter} of the \textbf{\textit{parametric equations}} for this example is the value of time, $t$.
+
+\vspace{0.1in}
+For straight-line motion, the object is located at an initial point, $\left(x_0, y_0\right)$. Provided the $x$ and $y$ rates of change (\textbf{\textit{deriatives}}) are constant, they can be represented by the quantities $a = \frac{dx}{dt}$ and $b = \frac{dy}{dt}$. Thus, at time $t$, the object has coordinates $\left(x_0 + at, y_0 + bt\right)$. The slope of the line the object is following is $m = \frac{b}{a}$.
+
+\vspace{0.1in}
+The \textbf{\textit{speed}} of this object can be quantified as well. In one unit of time, $t$, the object will move $a$ units in the $x$-direction and $b$ units in the $y$-direction; provided $a$ and $b$, are constant. Applying the Pythagorean Theorem results in:
+%
+\begin{equation}
+\text{Speed} = \frac{Distance}{Time} = \frac{\sqrt{a^2 + b^2}}{1} = \sqrt{a^2 + b^2}
+\end{equation}
+%
+More generally, for an object along an arbitrary curve with time-varying speed, the \textbf{\textit{instantaneous speed}} is given by:
+%
+\begin{equation}
+v = \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}
+\end{equation}
+%
+where $v_x = \frac{dx}{dt}$ is the \textbf{\textit{instantaneous velocity}} in the $x$-direction and $v_y = \frac{dy}{dt}$ is the \textbf{\textit{instantaneous velocity}} in the $y$-direction. Recall that \textbf{\textit{velocity}} has both magnitude \textit{and} direction. This introduces the idea of \textbf{\textit{unit vectors}}, which have an identity magnitude (1) and are always oriented in the $x$- and $y$-directions. For traditional $xy$-coordinate frames, $i$, and $j$ are used to represent motion in $x$ and $y$, respectively. Thus, the 
+\textbf{\textit{velocity vector}} is written as:
+%
+\begin{equation}
+\overrightarrow{v} = v_x \overrightarrow{i} + v_y \overrightarrow{j}
+\end{equation}
+%
+
+\vspace{0.1in}
+For any given point $\left(x_0, y_0\right)$, a tangent line to the curve can be given parametrically by finding the straight-line motion through  $\left(x_0, y_0\right)$ with the same $x$ and $y$ velocities as an object moving along the curve.
+
+\vspace{0.1in}
+Sometimes, the curve is more interesting to observe than the object's motion through space and time. This representation is referred to as the \textit{parameterization} of the curve. This can be helpful to graph complicated curves.
+
+\vspace{0.1in}
+The slope and concavity of \textbf{\textit{parametric curves}} can be obtained via the \textbf{\textit{Chain Rule}} by thinking of the \textbf{\textit{parametric equations}} as functions of time. The slope is given by:
+%
+\begin{equation}
+\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+\end{equation}
+%
+The second \textbf{\textit{derivative}} can be found by a similar method. If $w$ is a \textbf{\textit{differentiable}} function of $x$, then:
+%
+\begin{equation}
+\frac{dw}{dx} = \frac{\frac{dw}{dt}}{\frac{dx}{dt}}
+\end{equation}
+%
+For $w = \frac{dy}{dx}$:
+%
+\begin{equation}
+\frac{dw}{dx} = \frac{d}{dx}\left(\frac{dy}{dx}\right) = \frac{d^2y}{dx^2}
+\end{equation}
+%
+So, by the \textbf{\textit{Chain Rule}}:
+%
+\begin{equation}
+\frac{d^2y}{dx^2} = \frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}}
+\end{equation}
+%
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
