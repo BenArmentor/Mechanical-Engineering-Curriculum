@@ -1,0 +1,149 @@
+%!TEX root = Calculus_I.tex
+\chapter{The Derivative}
+\section{How do We Measure Speed?}
+\textbf{\textit{Speed}} is the magnitude of \textbf{\textit{velocity}}, and is a scalar quantity. \textbf{\textit{Velocity}} is a vector quantity, meaning it has magnitude \textit{and} direction. Thus, velocity can be negative if an object is moving opposite the positive direction. If $s(t)$ is the position of an object at time $t$, then the \textbf{\textit{average velocity}} of the object over the interval $t \in \left[a, b\right]$ is:
+\begin{equation}
+\label{eq:DQ}
+V_{avg} = \frac{\Delta s}{\Delta t} = \frac{s(b) - s(a)}{b - a}
+\end{equation}
+
+This representation does not help to understand the velocity of an object at a given instant in time, only over the interval $[a, b]$. For this problem of \textbf{\textit{instantaneous velocity}}, we need to look closer at the specified time instant, $t$.
+
+\vspace{0.1in}
+One way to converge to the instantaneous velocity at time $t$ is to use the definition of the \textbf{\textit{limit}}. As the interval $[a,b]$ gets sufficiently small and encloses the time $t$, a two-sided limit is being taken to determine the \textbf{\textit{instantaneous velocity}}; therefore, if $s(t)$ is the position at time $t$, the \textbf{\textit{instantaneous velocity}} at time $t = a$ can be defined as:
+\begin{equation}
+\lim_{h\rightarrow 0} \frac{s(a+h) - s(a)}{h}
+\end{equation}
+This approximation is valid as $h\rightarrow 0$ because most functions, $f(x)$, appear linear for small changes between $x$ values. This approximation yields the slope of the curve $f(x)$ at a point, $x = a$. Using this definition, we can redefine the \textbf{\textit{average velocity}} over any time interval $t \in [a, b]$ as:
+
+\vspace{0.1in}
+\textbf{\textit{Average Velocity}} -- the slope of the line joining the points on the graph of $s(t)$ corresponding to $t = a$ and $t = b$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Derivative at a Point}
+In this section, the \textbf{\textit{difference quotient}} shown in Equation (\ref{eq:DQ}) is applied to functions that are not necessarily functions of time. We are still interested in intervals of length $[a, a+h]$ where $h$ is sufficiently small. For any function $f$, the \textbf{\textit{difference quotient}} is given by $\frac{\Delta f}{\Delta x}$.
+
+\vspace{0.1in}
+The numerator of the \textbf{\textit{difference quotient}} is the \textbf{\textit{absolute change}} of the function, whereas the full \textbf{\textit{difference quotient}} is the average rate of change. When the interval $[a, a+h]$ is sufficiently small, that is $h \rightarrow 0$, we arrive at the \textbf{\textit{instantaneous rate of change}}. This is referred to as the \textit{derivative of function f at point a}, and is denoted by $f^\prime(a)$.
+
+\begin{equation}
+\label{eq:derivative}
+f^\prime(a) = \lim_{h\rightarrow 0} \frac{f(a+h) - f(a)}{h}
+\end{equation}
+
+If the \textbf{\textit{limit}} in Equation (\ref{eq:derivative}) exists, then $f$ is said to be \textbf{differentiable at a}. The \textbf{\textit{derivative}} at point $a$ can be interpreted as the slope of the curve $f(x)$ at point $a$, or the slope of the tangent line to the curve at point $a$ if $h \ll 1$.
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Derivative Function}
+The previous section focused on the \textbf{\textit{derivative}} at a fixed point, $a$. This section will cover how the \textbf{\textit{derivative}} changes at different points because it is also a function of the independent variable. Using the definition of the \textbf{\textit{derivative}} at a point, we can arrive at the following extention to functions:
+\begin{equation}
+\label{eq:deriv_function}
+f^\prime(x) = \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h}
+\end{equation}
+Thus, for every $x$ value that the limit in Equation (\ref{eq:deriv_function}) exists, we can state that the function $f$ is \textit{differentiable at} that $x$ value. If there are no points that $f$ is \textbf{\textit{undifferentiable}}, then $f$ is \textit{differentiable everywhere}, which is often the case.
+
+\vspace{0.1in}
+The derivative tells us how the function $f(x)$ is changing with $x$. If $f^\prime > 0$ over an interval $[a, b]$, then $f$ is \textbf{\textit{increasing}} over that interval. Conversely,  If $f^\prime < 0$ over an interval $[a, b]$, then $f$ is \textbf{\textit{decreasing}} over that interval. The magnitude of $f^\prime$ indicates how much the function increases ($|f^\prime| \gg 0 \rightarrow f$ is changing rapidly; ($|f^\prime| \ll 1 \rightarrow f$ is changing slowly).
+
+\vspace{0.1in}
+For constant functions, $f(x) = k$, the \textbf{\textit{derivative}} is equal to zero because the function values do not change with changes in $x$. For linear functions, $f(x) = mx + b$, the \textbf{\textit{derivative}} is $m$ because it is the slope of the tangent line to $f(x)$, which is linear. For $n-degree$ polynomials, $n > 1$, the derivative can be estimated numerically by function evaluations using Equation (\ref{eq:deriv_function}).
+
+\vspace{0.1in}
+For power functions, $f(x) = x^n$, the \textbf{\textit{Binomial Theorem}} can be used to show the \textbf{\textit{Power Rule of Differentiation}}, which is valid for $n \in \mathbb{R}$:
+\begin{equation}
+\text{If} \hphantom{-} f(x) = x^n, \hphantom{-} \text{then} \hphantom{-} f^\prime(x) = n x^{n-1}
+\end{equation}
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Interpretations of the Derivative}
+Another commonly used notation for the \textbf{\textit{derivative}} is \textbf{\textit{Leibniz's Notation}}:
+\begin{equation}
+f^\prime(x) = \frac{dy}{dx}
+\end{equation}
+Here, $d$ suggests ``\textit{small difference in}." An alternative form of \textbf{\textit{Leibniz's Notation}}:
+\begin{equation}
+\frac{dy}{dx} = \frac{d}{dx}(y)
+\end{equation}
+which means ``\textit{the derivative of y with respect to x}". The terms $dy$ and $dx$ in this notation are often used a seperate entities in mathematics, representing infinitesimally small changes in $y$ and $x$, respectively. Relating this back to previous examples, velocity can be writen as:
+\begin{equation}
+v = \frac{ds}{dt}
+\end{equation}
+
+\vspace{0.1in}
+To specify the derivative at a point, $c$, we can write:
+\begin{equation}
+\at{\frac{dy}{dx}}{x=c} % Manually defined command in preamble of Calculus_I.tex
+\end{equation}
+The units of the \textbf{\textit{derivative}} of a function depend on the units of the dependent and independent variables, but it is always given by:
+\begin{equation}
+\frac{Y\hphantom{-} \text{units}}{X\hphantom{-} \text{units}}
+\end{equation}
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{The Second Derivative}
+Because the \textbf{\textit{derivative}} is a function, we can also consider its \textbf{\textit{derivative}}. The \textbf{\textit{derivative}} of the \textbf{\textit{derivative}} results in the \textbf{\textit{second derivative}}, which is denoted by:
+\begin{equation}
+\label{eq:second_deriv}
+f^{\prime\prime}(x) = \frac{d^2 y}{dx^2} = \frac{d}{dx}\left(\frac{dy}{dx}\right)
+\end{equation}
+
+The \textbf{\textit{second derivative}} provides the same information about the \textbf{\textit{derivative}} as the \textbf{\textit{derivative}} provides about $f(x)$, namely:
+\begin{enumerate}
+\item  If $f^{\prime\prime} > 0$ on an interval $[a,b]$, then $f^\prime$ is \textbf{\textit{increasing}} over $[a,b]$.
+\item  If $f^{\prime\prime} < 0$ on an interval $[a,b]$, then $f^\prime$ is \textbf{\textit{decreasing}} over $[a,b]$.
+\end{enumerate}
+With this information, we can determine if $f(x)$ is \textbf{\textit{concave up}} or \textbf{\textit{concave down}}.
+\begin{enumerate}
+\item  If $f^{\prime\prime} > 0$ on an interval $[a,b]$, then $f(x)$ is \textbf{\textit{concave up}} over $[a,b]$.
+\item  If $f^{\prime\prime} < 0$ on an interval $[a,b]$, then $f(x)$ is \textbf{\textit{concave down}} over $[a,b]$.
+\end{enumerate}
+If $f^{\prime\prime} = 0$, then this is an \textbf{\textit{inflection point}}, where the function $f(x)$ changes the direction of curvature, or a \textbf{\textit{saddle point}}, where the \textbf{\textit{derivative}} is zero, but concavity does not change.
+% TODO: Verify that saddle point definition is true in general.
+
+\vspace{0.1in}
+Relating the \textbf{\textit{second derivative}} back to speed and velocity, and using the definition in Equation (\ref{eq:second_deriv}), the acceleration of an object can be given by:
+\begin{equation}
+a(t) = v^\prime(t) = s^{\prime\prime}(t) = \frac{d^2 s}{dt^2} = \frac{d}{dt}\left(v\right) = \frac{d}{dt}\left(\frac{ds}{dt}\right)
+\end{equation}
+
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
+
+\section{Differentiability}
+A function $f$ is \textbf{\textit{differentiable}} at $x$ if the following \textbf{\textit{limit}} exists:
+\begin{equation}
+\lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h}
+\end{equation}
+Thus, the graph of $f$ has a non-vertical tangent line at $x$. The value of the \textbf{\textit{limit}} and the slope of the tangent line are the \textbf{\textit{derivative}} of $f$ at $x$.
+
+\vspace{0.1in}
+Additionally, the function must be continuous at the point $x$ and not have a \textbf{\textit{sharp corner}} at $x$. \textbf{\textit{Sharp corners}} occur when each \textbf{\textit{one-sided limit}} approaches different values, that is $L^+ \neq L^-$. An example of this type of function is:
+\begin{equation}
+f(x) = |x|
+\end{equation}
+which has a \textbf{\textit{sharp corner}} at $x = 0$.
+
+\vspace{0.1in}
+If a function $f(x)$ is \textbf{\textit{differentiable}} at $x = a$, then $f(x)$ is \textbf{\textit{continuous}} at $x = a$; however $f(x) = |x|$ is continuous at $x =0$, but undifferentiable.
+\begin{center}
+\section*{\small Examples}
+Coming soon$!^{\text{TM}}$
+\end{center}
