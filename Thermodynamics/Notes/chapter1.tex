@@ -1,0 +1,168 @@
+%!TEX root = Thermodynamics.tex
+\chapter{Introduction and Basic Concepts}
+The purpose of this chapter is to identify and form a basic understanding of Thermodynamics jargon. This is the key to understanding any scientific area. We also will discuss the general technique used to solve Thermodynamics problems.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thermodynamics and Energy}
+Thermodynamics is the study of \textbf{\textit{energy}}. A general definition for \textbf{\textit{energy}} is the ability to cause change in a \textbf{\textit{system}}. Though the name \textit{Thermodynamics}} suggests it is only concerned with studying \textbf{\textit{heat}}, today it is used to study \textbf{\textit{refrigeration}}, \textbf{\textit{power generation}}, and \textbf{\textit{matter}} properties.
+
+\vspace{0.1in}
+The \textbf{\textit{Conservation of Energy Principle}} is paramount to the study of Thermodynamics.
+
+\vspace{0.1in}
+\noindent \textbullet \hphantom{-} \textbf{\textit{Conservation of Energy Principle}}: \textbf{\textit{Energy}} cannot be created or destroyed, but only change from one form to another.
+
+\vspace{0.1in}
+The two main types of \textbf{\textit{energy}} are \textbf{\textit{Potential Energy}} and \textbf{\textit{Kinetic Energy}}. The change in \textbf{\textit{energy}} of a given system can be represented by:
+%
+\begin{equation}
+\Delta E = E_{in} - E_{out}
+\end{equation}
+%
+The study of Thermodynamics did not emerge until the first steam engines were constructed in 16978 and 1712 in England. Much like Sir Isaac Newton's Laws of Motion, Thermodynamics has laws that govern the study of energy:
+%
+\begin{enumerate}
+\label{Laws of Thermodynamics}
+\item \textbf{\textit{Energy}} is a thermodynamic property that cannot be created or destroyed, but can be converted from one form to another.\\
+\item \textbf{\textit{Energy}} has \textit{quality} and \textit{quantity}.  \textbf{\textit{Processes}} occur in the direction of decreasing \textit{quality} of energy.
+\end{enumerate}
+%
+These two laws were founded through the work of Rankine, Clausius, and Lord Kelvin.
+
+\vspace{0.1in}
+\textbf{\textit{Classical Thermodynamics}} uses a macroscopic approach to solving engineering problems, meaning that one does not need to know the behavior of the molecules of the system. \textbf{\textit{Statistical Thermodynamics}} studies the average behavior of large quantities of molecules on a microscopic scale. This text is mostly concerned with \textbf{\textit{Classical Thermodynamics}}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Importance of Dimensions and Units}
+Any physical object can be characterized by \textbf{\textit{dimensions}}. The magnitudes of the \textbf{\textit{dimensions}} are captured by \textbf{\textit{units}}. The \textbf{\textit{Primary Dimensions}} and corresponding SI units are listed below. All other units, the \textbf{\textit{Derived Units}} can be found using a combination of these measurements.
+%
+\begin{table}[b]
+\begin{center}
+\label{Primary Dimensions}
+\begin{tabular}{lr}
+\textbf{Dimension} & \textbf{Units}\\
+\hline\\
+Length & meter (m)\\
+Mass & kilogram (kg)\\
+Time & second (s)\\
+Temperature & kelvin (K)\\
+Electric Current & ampere (A)\\
+Amount of Light & candela (cd)\\
+Amount of Matter & mole (mol)
+\end{tabular}
+\end{center}
+\end{table}
+%
+The majority of this reference will refer to quantities using SI units.
+
+\newpage
+Below are some conversions between important SI and US Customary Units:
+%
+\begin{equation}
+1\text{ pound-mass (lbm)} = 0.45359\text{ kg}
+\end{equation}
+%
+\begin{equation}
+1\text{ foot (ft)} = 0.3048\text{ m}
+\end{equation}
+%
+The SI \textbf{\textit{derived unit}} for \textbf{\textit{force}} is the \textbf{\textit{Newton}}. Newton's Second Law of Motion is given by:
+%
+\begin{equation}
+\text{Force} = \text{Mass}\cdot\text{Acceleration}
+\end{equation}
+%
+\begin{equation}
+F = ma
+\end{equation}
+%
+The \textbf{\textit{Newton}} is defined as the \textbf{\textit{force}} required to move a 1-kg object at a rate of 1 $\frac{\text{m}}{\text{s}^2}$. The US Customary equivalent is the \textbf{\textit{pound-force}}, which is the \textbf{\textit{force}} required to move 1 \textbf{\textit{slug}} (32.174 lbm) at a rate of 1 $\frac{\text{ft}}{\text{s}^2}$:
+%
+\begin{equation}
+1\text{ Newton (N)} = 1 \hphantom{-}\frac{\text{kg}\cdot\text{m}}{\text{s}^2}
+\end{equation}
+%
+\begin{equation}
+1\text{ lbf} = 32.174 \hphantom{-} \frac{\text{lbm}\cdot\text{ft}}{\text{s}^2}
+\end{equation}
+%
+
+Note: \textbf{\textit{weight}} is a \textbf{\textit{force}}, not a measurement of mass. A gravitational force exists between all objects; the magnitude of this force depends on the size of the objects and the distance between them. For most practical purposes, the gravitational constant, $g$, can be approximated as 9.807 $\frac{\text{m}}{\text{s}^2}.
+
+\vspace{0.1in}
+\textbf{\textit{Work}} is a form of \textbf{\textit{energy}}, and is defined as:
+%
+\begin{equation}
+\text{Work} = \text{Force}\cdot\text{Distance \hphantom{-}(N}\cdot\text{m)}
+\end{equation}
+%
+The standard SI \textbf{\textit{derived unit}} for \textbf{\textit{work}} is the \textbf{\textit{Joule}}:
+%
+\begin{equation}
+1 \text{ Joule (J)} = 1 \text{ N}\cdot\text{m}
+\end{equation}
+%
+The US Customary equivalent to the \textbf{\textit{Joule}} is the \textbf{\textit{British Thermal Unit}} (Btu):
+%
+\begin{equation}
+1 \text{ Btu} = 1055.1 \text{ J}
+\end{equation}
+%
+Another common unit for \textbf{\textit{energy}} is the \textbf{\textit{calorie}} (cal):
+%
+\begin{equation}
+1 \text{ cal} = 4.1868 \text{ J}
+\end{equation}
+%
+Note: when \textbf{\textit{calorie}} begins with a capital ``C," as in \textbf{\textit{Calorie}}, this is a \textit{kilo-calorie}:
+%
+\begin{equation}
+1 \text{ Cal} = 1000 \text{ cal}
+\end{equation}
+%
+Another \textbf{\textit{derived unit}} is used when adding a temporal component to \textbf{\textit{energy}}. The \textbf{\textit{Watt}} (W) is the standard SI unit to define \textbf{\textit{energy rates}}, or \textbf{\textit{power}}:
+%
+\begin{equation}
+1 \text{ W} = 1 \hphantom{-} \frac{J}{s}
+\end{equation}
+%
+The US Customary equivalent to \textbf{\textit{Watts}} is the \textbf{\textit{horsepower}} (hp):
+%
+\begin{equation}
+1 \text{ hp} = 756 \text{ W}
+\end{equation}
+%
+These conversions are important to make calculations with \textit{dimensional homogeneity}. Not paying attention to units is a common mistake for errors to propogate throughout a problem.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Systems and Control Volumes}
+A \textbf{\textit{system}} is defined as a quantity of \textbf{\textit{matter}} or a region in space chosen for study. Anything that is not part of the \textbf{\textit{system}} is referred to as the \textbf{\textit{surroundings}}. A hypothetical barrier can be used to separate the \textbf{\textit{system}} from the \textbf{\textit{surroundings}}.
+
+\vspace{0.1in}
+\textbf{\textit{Systems}} can be defined as either \textit{open} or \textit{closed}. A \textbf{\textit{Closed System}} or \textbf{\textit{control mass}} has a constant amount of \textbf{\textit{mass}} in the \textbf{\textit{system}} at all times; thus, no \textbf{\textit{mass}} can enter or leave the \textbf{\textit{system}} by crossing the barrier that separates it from the \textbf{\textit{surroundings}}. However, \textbf{\textit{energy}} can cross the barrier, and the volume of a \textbf{\textit{closed system}} does not need to remain fixed. A common example of a \textbf{\textit{closed system}} is a piston cylinder. A special case of a \textbf{\textit{closed system}} when energy is also not allowed to cross the barrier is an \textit{isolated system}}.
+
+\vspace{0.1in}
+\textbf{\textit{Open Systems}} or \textbf{\textit{control volumes}} are regions in space with constant volumetric dimensions. Here, both \textbf{\textit{mass}} and \textbf{\textit{energy}} are allowed to cross the barrier. Examples of these types of systems include nozzles or turbines. The boundaries of the \textbf{\textit{control volume}} are referred to as the \textbf{\textit{control surface}}. There are no rules to properly select a \textbf{\textit{control volume}}, but proper selection can simplify a problem's solution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Properties of a System}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Density and Specific Gravity}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{State and Equilibrium}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Processes and Cycles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Temperature and the Zeroth Law of Thermodynamics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pressure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pressure Measurement Devices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem Solving Technique}
