@@ -141,25 +141,98 @@ A \textbf{\textit{system}} is defined as a quantity of \textbf{\textit{matter}} 
 
 \vspace{0.1in}
 \textbf{\textit{Open Systems}} or \textbf{\textit{control volumes}} are regions in space with constant volumetric dimensions. Here, both \textbf{\textit{mass}} and \textbf{\textit{energy}} are allowed to cross the barrier. Examples of these types of systems include nozzles or turbines. The boundaries of the \textbf{\textit{control volume}} are referred to as the \textbf{\textit{control surface}}. There are no rules to properly select a \textbf{\textit{control volume}}, but proper selection can simplify a problem's solution.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Properties of a System}
+Characteristics of a \textbf{\textit{system}} are referred to as \textbf{\textit{properties}} of that \textbf{\textit{system}}. These can be mass, temperature, pressure, etc. These \textbf{\textit{properties}} can also be classified as \textbf{\textit{extensive}} or \textbf{\textit{intensive}}. The difference between the two is that \textbf{\textit{intensive properties}} are independent of the mass of the \textbf{\textit{system}}.
+
+For our purposes, \textbf{\textit{systems}} will be treated as if the mass and matter entering and exiting the boundaries are part of a \textbf{\textit{continuum}}, or that it is homogenous. The properties do not vary with location for a given material.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Density and Specific Gravity}
+\textbf{\textit{Density}} is the measure of mass per unit volume:
+%
+\begin{equation}
+\rho = \frac{m}{\nu}
+\end{equation}
+%
+This is the inverse of \textbf{\textit{specific volume}}. \textbf{\textit{Density}} tends to be a function of the \textbf{\textit{temperature}} and \textbf{\textit{pressure}} of a substance. Most liquids and solids are considered to be \textit{incompressible}, that is their density does not vary much with changes in \textbf{\textit{pressure}}.
+
+\textbf{\textit{Density}} is sometimes referred to as a ratio between that of the given substance and a well-known substance, like water. This is referred to as \textbf{\textit{Specific Gravity}}:
+%
+\begin{equation}
+\text{SG} = \frac{\rho}{\rho_{\text{H}_2 \text{O}}}
+\end{equation}
+%
+This is a dimensionless quantity. The \textbf{\textit{specifc weight}} of a substance is given by:
+%
+\begin{equation}
+\gamma_s = \rho g
+\end{equation}
+%
+where $g$ is the acceleration due to gravity. This has units of $\frac{\text{N}}{\text{m}^3}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State and Equilibrium}
+Suppose there is a \textbf{\textit{system}} not undergoing any change. At this instant, the system's \textbf{\textit{properties}} can be either measured or calculated. The resulting values for the properties that completely describe the system's current configuration is referred to as a system's \textbf{\textit{state}}.
+
+Thermodynamics is mostly concerned with \textbf{\textit{equilibrium states}}. This occurs when there are no internal or external forces on the system that would cause the system to change \textbf{\textit{states}} when isolated from its \textbf{\textit{surroundings}}.
+
+\textbf{\textit{Equilibrium}} can be separated into several components, including \textbf{\textit{thermal}}, \textbf{\textit{mechanical}}, \textbf{\textit{phase}}, and \textbf{\textit{chemical}}. \textbf{\textit{Thermal equilibrium}} requires there to be no \textbf{\textit{temperature}} difference throughout the \textbf{\textit{system}}. Likewise, \textbf{\textit{mechanical equilibrium}} implies uniform pressure. \textbf{\textit{Phase equilibrium}} occurs when the mass of each phase reaches an equilibrium level and does not change. \textbf{\textit{Chemical equilibrium}} requires there to be no chemical compositional changes with time. All of these must be satisfied for a \textbf{\textit{system}} to be in an \textbf{\textit{equilibrium state}}.
+
+\textbf{\textit{The State Postulate}} states that \textit{the state of a simple, compressible system is completely specified by two independent, intensive properties}. This type of \textbf{\textit{system}} exists if there are n electrical, magnetic, gravitational, motion, and surface tension effects. Otherwise, the \textbf{\textit{State Postulate}} does not hold.
+
+\textbf{\textit{Intensive properties}} are \textbf{\textit{independent}} if it is possible to change one without adjusting the other. Some examples of these \textbf{\textit{intensive properties}} are \textbf{\textit{temperature}} and \textbf{\textit{specific volume}}. An example of coupled \textbf{\textit{intensive properties}} are \textbf{\textit{temperature}} and \textbf{\textit{pressure}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Processes and Cycles}
+Any change in a \textbf{\textit{system}} that brings it from one \textbf{\textit{equilibrium state}} to another is referred to as a \textbf{\textit{process}}. The series of \textbf{\textit{states}} that the \textbf{\textit{system}} to experience during the \textbf{\textit{process}} is referred to as the \textbf{\textit{process path}}.
+
+There are some special processes:
+%
+\begin{enumerate}
+\item \textbf{\textit{isothermal process}} -- A \textbf{\textit{process}} where \textbf{\textit{temperature}} remains constant.\\
+\item \textbf{\textit{isobaric process}} -- A \textbf{\textit{process}} where \textbf{\textit{pressure}} remains constant.\\
+\textbf{\textit{isometric process}} -- A \textbf{\textit{process}} where the \textbf{\textit{specific volume}} remains constant.
+\end{enumerate}
+%
+
+If a series of \textbf{\textit{processes}} result in two identical \textbf{\textit{system states}}, then the \textbf{\textit{system}} is said to have undergone a \textbf{\textit{cycle}}.
+
+A \textbf{\textit{steady-flow process}} can be used to idealize real processes. This means that the \textbf{\textit{system mass}} is flowing through the \textbf{\textit{control volume}} steadily. This can be used to represent continuous-operation devices, such as turbines, pumps, boilers, condensers, heat exchangers, refrigeration systems. \textbf{\textit{Cyclic processes}} can also be approximated by \textbf{\textit{steady-flow processes}} if an average over time is used for \textbf{\textit{system properties}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Temperature and the Zeroth Law of Thermodynamics}
+Recall that \texbf{\textit{thermal equilibrium}} requires \textbf{\textit{temperature}} to be uniform throughout a \textbf{\textit{system}}. The \textbf{\textit{Zeroth Law of Thermodynamics}} states that \textit{if two bodies are in thermal equilibrium with a third body, then they are also in thermal equilibrium with each other}.
+
+This is important for forming an understanding of \textbf{\textit{temperature}}, because there are different scales for measuring \textbf{\textit{temperature}}. Thoughout this document, you may encounter the following:
+%
+\begin{enumerate}
+\item \textbf{\textit{Celsius}} -- denoted by $\#^\circ \text{C}$\\
+\item \textbf{\textit{Fahrenheit}} -- denoted by $\#^\circ \text{F}$\\
+\textbf{\textit{Kelvin}} -- denoted by $\#K$\\
+\textbf{\textit{Rankine}} -- denoted by $\#R$\\
+\end{enumerate}
+%
+The following relationships can be used to convert between different scales:
+%
+\begin{equation}
+T(\text{K}) = T(^\circ C) + 273.15
+\end{equation}
+%
+%
+\begin{equation}
+T(\text{R}) = T(^\circ F) + 459.67
+\end{equation}
+%
+%
+\begin{equation}
+T(^\circ F) = 1.8T(^\circ C) + 32
+\end{equation}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pressure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pressure Measurement Devices}
